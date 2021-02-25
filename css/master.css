@@ -24,17 +24,97 @@ main {
   flex-wrap: wrap;
   text-align: center;
 }
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+/****************************************************************
+**  FIZZBUZZ FORM
+*/
+/* INPUT FORM */
+main .input_form .form_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .input_form .form_box .row_in {
+  /* solo per molti campi input */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* flex-wrap: wrap; */
+  /* max-width: 400px; */
+}
+main .input_form .form_box .row_in .input_box {
+  margin: 0 20px;
+}
+main .input_form .form_box .row_in .input_box input {
+  padding: 8px;
+  min-width: 200px;
+  border: 2px solid var(--black);
+  border-radius: 5px;
+  color: var(--black);
+  background-color: var(--white);
+  outline: none;
+}
+main .input_form .form_box .row_in .input_box input:focus {
+  color: var(--white);
+  background-color: var(--black);
+  outline: none;
+}
+main .input_form .form_box .row_in .input_box input:focus::placeholder {
+  color: transparent;
+}
+/* firefox input red outline */
+main .input_form .form_box .row_in .input_box input:required,
+main .input_form .form_box .row_in .input_box input:invalid {
+  box-shadow: none;
+}
+main .input_form .form_box .row_btn button {
+  margin: 20px 10px 0;
+}
+/* RESPONSE MESSAGE */
+main .input_form .form_box #msg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  border-radius: 5px;
+  background-color: var(--white);
+}
+main .input_form .form_box #msg .msg_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+main .input_form .form_box #msg .msg_content #check_msg {
+  text-align: left;
+}
+main .input_form .form_box .row_btn button#insertion_btn {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  color: var(--black);
+}
+main .input_form #msg button {
+  margin-top: 15px;
+}
 
 /****************************************************************
 **  DISPLAY RESULT
 */
-#display_result table tr>td {
-  text-align: right;
-  /* padding-left: 20px; */
-}
 #display_result table tr td+td {
   text-align: left;
   padding-left: 20px;
+}
+.strong {
+  color: var(--purple);
+  font-weight: 600;
 }
 
 /****************************************************************
@@ -50,6 +130,38 @@ main {
 }
 
 /****************************************************************
+**  DISPLAY ON/OFF
+*/
+.hide {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+/****************************************************************
+**  BUTTONS
+*/
+button {
+  padding: 5px 15px;
+  color: var(--white);
+  background-color: var(--black);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+button:hover {
+  transform: scale(1.04);
+}
+
+/****************************************************************
 **  TEXTS
 */
 .ms_txt_title {
@@ -62,5 +174,5 @@ main {
   display: inline-block;
   font-size: 1em;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 10px 10px 0;
 }

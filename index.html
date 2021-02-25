@@ -23,8 +23,50 @@
 
     <main>
 
+      <!-- ** SURNAME FORM ** -->
+      <section class="input_form">
+        <h1 class="ms_txt_title">FizzBuzz... oppure altro!</h1>
+        <div class="form_box card">
+          <div class="row_in">
+            <div class="input_box">
+              <label for="total_numbers" class="ms_txt_1">Numeri totali</label>
+              <input id="total_numbers" type="text" name="total_numbers" placeholder="inserisci il numero totale" required>
+            </div>
+            <div class="input_box">
+              <label for="factor_1" class="ms_txt_1">Divisore 1</label>
+              <input id="factor_1" type="text" name="factor_1" placeholder="inserisci il primo divisore" required>
+            </div>
+            <div class="input_box">
+              <label for="factor_2" class="ms_txt_1">Divisore 2</label>
+              <input id="factor_2" type="text" name="factor_2" placeholder="inserisci il secondo divisore" required>
+            </div>
+            <div class="input_box">
+              <label for="msg_1" class="ms_txt_1">Etichetta 1</label>
+              <input id="msg_1" type="text" name="msg_1" placeholder="inserisci la prima etichetta" required>
+            </div>
+            <div class="input_box">
+              <label for="msg_2" class="ms_txt_1">Etichetta 2</label>
+              <input id="msg_2" type="text" name="msg_2" placeholder="inserisci la seconda etichetta" required>
+            </div>
+          </div>
+          <div class="row_btn">
+            <button id="check_btn">Visualizza risultato</button>
+            <button id="erase_btn">Annulla</button>
+          </div>
+          <div id="msg" class="hide">
+            <div class="msg_content">
+              <div id="check_msg"></div>
+              <div class="row_btn">
+                <button id="resume_btn">Torna indietro</button>
+                <!-- <button id="insertion_btn" class="hide"><strong>Conferma inserimento</strong></button> -->
+              </div>
+            </div>
+          </div>      
+        </div> <!--form_box-->
+      </section>
+
       <!-- ** DISPLAY RESULT ** -->
-      <section id="display_result" class="hi-de">
+      <section id="display_result" class="hide">
         <h1 class="ms_txt_title">lista</h1>
         <div class="card"><table id="result_list"></table></div>  
       </section>
